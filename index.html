@@ -5,36 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/juni-css.css">
     <title>Juniper Folk Band</title>
-        <!-- MailerLite Universal -->
-    <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '761798');
-    </script>
-    <!-- End MailerLite Universal -->
+    <script defer src="assets/juni-java.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#gig-list">Live</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <input class="checkbox" type="checkbox" name="">
+        <span class="icon"></span>
+        <ul class="sidebar">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#gig-list">Live</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <img src="assets/juni-side.png" alt="Juniper logo">
+        </ul>
+        
     </header>
+<main>
     <section id="hero">
         <img class="home-image" src="assets/hero.jpg" alt="Juniper band in front of manor house windows">
-        <img class="home-people" src="assets/hero-people.png">
-        <img class="home-people-filter" src="assets/hero-people-filter.png">
         <div class="home-filter">
             <img class="home-logo" src="assets/logo-plain.png" alt="Juniper logo">
         </div>
+        <img class="home-people" src="assets/hero-people.png">
+        <img class="home-people-filter" src="assets/hero-people-filter.png">
         <!-- > PUSH ALBUM HERE -->
     </section>
 
@@ -77,14 +72,29 @@
     <section id="shop">
         <h2>Shop</h2>
         <!--PREORDERS AND LIVE ORDERS. EMAILS DOM EVERY ORDER-->
-        <script async
-        src="https://js.stripe.com/v3/buy-button.js">
-        </script>
-      
-        <stripe-buy-button
-            buy-button-id="buy_btn_1OWLjuLGzWF9KVBLNqldrAWn"
-            publishable-key="pk_live_51OWLEzLGzWF9KVBL5w7jQOqyztoEU4UoF1RyVH02gGfXBZZyIZMMoCdqsRbSJvKHDaSh9gQ0HJT9PVoI8pUanc3h00UQeQ2QVe">
-        </stripe-buy-button>
+        <div class="shop items">
+            <script async
+            src="https://js.stripe.com/v3/buy-button.js">
+            </script>
+
+            <stripe-buy-button
+            buy-button-id="buy_btn_1OXOfYLGzWF9KVBLF0PHJcu6"
+            publishable-key="pk_live_51OWLEzLGzWF9KVBL5w7jQOqyztoEU4UoF1RyVH02gGfXBZZyIZMMoCdqsRbSJvKHDaSh9gQ0HJT9PVoI8pUanc3h00UQeQ2QVe"
+            >
+            </stripe-buy-button>
+
+            <stripe-buy-button
+            buy-button-id="buy_btn_1OXOcKLGzWF9KVBL2UuDRey0"
+            publishable-key="pk_live_51OWLEzLGzWF9KVBL5w7jQOqyztoEU4UoF1RyVH02gGfXBZZyIZMMoCdqsRbSJvKHDaSh9gQ0HJT9PVoI8pUanc3h00UQeQ2QVe"
+            >
+            </stripe-buy-button>
+        
+            <stripe-buy-button
+            buy-button-id="buy_btn_1OXOkYLGzWF9KVBLzX1quYeM"
+            publishable-key="pk_live_51OWLEzLGzWF9KVBL5w7jQOqyztoEU4UoF1RyVH02gGfXBZZyIZMMoCdqsRbSJvKHDaSh9gQ0HJT9PVoI8pUanc3h00UQeQ2QVe"
+            >
+            </stripe-buy-button>
+        </div>
     </section>
 
     <section id="gig-list">
@@ -99,11 +109,11 @@
         <p>Here is why you should join our mailing list!</p>
         <div class="ml-embedded" data-form="WjC7m3"></div>
     </section>
-
-    <footer>
-        <p><a>Tech Spec</a></p>
-        <p><a>EPK</a></p>
-        <!-- SOCIAL LINKS -->
-    </footer>
+</main>
+<footer>
+    <p><a>Tech Spec</a></p>
+     <p><a>EPK</a></p>
+     <!-- SOCIAL LINKS -->
+ </footer>
 </body>
 </html>
