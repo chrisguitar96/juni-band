@@ -1,11 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 *  {
     padding: 0;
     margin: 0;
     border: 0;
-}
-
-body {
-    background-color: #2F2E2E;
+    overflow-x: hidden;
 }
 
 /* FONTS */
@@ -24,8 +25,8 @@ p {
 }
 
 nav {
-    position: fixed;
-    top: 10vh;
+    position: absolute;
+    top: 7.5vh;
     z-index: 1000;
     width: 100vw;
     display: flex;
@@ -34,28 +35,102 @@ nav {
 
 }
 
-nav ul {
-    width: 50vw;
-    display: flex;
-    justify-content: space-evenly;
+/* SIDE BAR */
+
+.checkbox {
+    position: fixed;
+    right: 22px;
+    top: 21px;
+    width: 47px;
+    height: 47px;
+    z-index: 100000;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-nav ul li {
-    display: inline;
+.icon {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100000;
+    cursor: pointer;
+    background-color: black;
+    pointer-events: none;
+    border-radius: 5px;
+}
+
+.icon::before {
+    content: '✖';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 40px;
+
 }
 
-nav a {
+.checkbox:checked ~ .icon::before {
+    content: 'menu';
+    font-size: 20px;
+} 
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 100vh;
+    background-color: #2f2e2e;
+    transition: all 1s;
+    z-index: 100000;
+    overflow-y: auto;
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.sidebar li a {
+    display: block;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
     text-decoration: none;
-    color: white;
-    transition: all 0.75s ease-in-out;
+    font-size: 20px;
+    transition: 0.75s;
 }
 
-nav a:hover {
-    color: blue;
+.sidebar li a:hover {
+    transform: translateX(10px);
+    color: brown;
+}
+
+.checkbox:checked ~ .sidebar {
+    left: -300px;
+}
+
+.sidebar img {
+    height: 50vh;
+    padding-top: 20px;
+    position: absolute;
+    bottom: 20px;
 }
 
 /* HERO PAGE */
+
+#hero {
+    position: sticky;
+    top: 0;
+}
 
 .home-image {
     height: 100vh;
@@ -63,7 +138,7 @@ nav a:hover {
     overflow: hidden;
     object-fit: cover;
     position: relative;
-    z-index: 0;
+    z-index: -5;
 }
 
 .home-filter {
@@ -73,17 +148,17 @@ nav a:hover {
     position: absolute;
     top: 0;
     display: flex;
-    z-index: 1;
+    z-index: -4;
     overflow: hidden;
 }
 
 .home-logo {
-    margin-top: 20vh;
+    margin-top: 10vh;
     margin-left: auto;
     margin-right: auto;
     height: 100px;
     width: auto;
-    z-index: 2;
+    z-index: -3;
     overflow: hidden;
 }
 
@@ -94,7 +169,7 @@ nav a:hover {
     object-fit: cover;
     position: absolute;
     top: 0;
-    z-index: 3;
+    z-index: -2;
 }
 
 .home-people-filter {
@@ -104,7 +179,7 @@ nav a:hover {
     object-fit: cover;
     position: absolute;
     top: 0;
-    z-index: 4;
+    z-index: -1;
     opacity: 0.35;
 }
 
@@ -114,16 +189,16 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #2f2e2e;
+    position: relative;
 }
 
 .split {
-    width: 50vw;
+    width: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 /* DIVIDER */
@@ -157,5 +232,44 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #2F2E2E;
+    position: relative;
 }
 
+/* GALLERY */
+
+#gallery {
+    background-color: #2F2E2E;
+    position: relative;
+}
+
+/* SHOP */
+
+#shop {
+    background-color: #2F2E2E;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-items {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* GIGS */
+
+#gig-list {
+    background-color: #2F2E2E;
+    position: relative;
+}
+
+/* CONTACT */
+
+#contact {
+    background-color: #2F2E2E;
+    position: relative;
+}
