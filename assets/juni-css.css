@@ -7,45 +7,43 @@ html {
     margin: 0;
     border: 0;
     overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2f2e2e;
 }
 
 /* FONTS */
 
 h2 {
+    font-family: "Quattrocento", serif;
     text-align: center;
     color: whitesmoke;
 }
 
 h3 {
+    font-family: "Quattrocento", serif;
     color: white;
 }
 
 p {
+    font-family: "Quattrocento Sans", sans-serif;
     color: white;
-}
-
-nav {
-    position: absolute;
-    top: 7.5vh;
-    z-index: 1000;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
 }
 
 /* SIDE BAR */
 
 .checkbox {
     position: fixed;
-    right: 22px;
-    top: 21px;
-    width: 47px;
-    height: 47px;
+    right: 27px;
+    top: 25px;
+    width: 35px;
+    height: 35px;
     z-index: 100000;
     cursor: pointer;
-    border-radius: 5px;
+    opacity: 0;
+    z-index: 100000;
 }
 
 .icon {
@@ -56,13 +54,14 @@ nav {
     height: 50px;
     z-index: 100000;
     cursor: pointer;
-    background-color: black;
     pointer-events: none;
-    border-radius: 5px;
+    background-color: black;
+    border-radius: 25%;
+    opacity: 0.75;
 }
 
 .icon::before {
-    content: '✖';
+    content: 'menu';
     position: absolute;
     top: 0;
     right: 0;
@@ -76,46 +75,45 @@ nav {
 }
 
 .checkbox:checked ~ .icon::before {
-    content: 'menu';
+    content: 'X';
     font-size: 20px;
 } 
 
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -300px;
     margin: 0;
     padding: 50px 20px;
-    box-sizing: border-box;
     width: 300px;
     height: 100vh;
     background-color: #2f2e2e;
     transition: all 1s;
-    z-index: 100000;
+    z-index: 10000;
     overflow-y: auto;
 }
 
 .sidebar li {
     list-style: none;
+    font-family: "Quattrocento", serif;
+    font-size: 30px;
+    padding: 15px;
 }
 
 .sidebar li a {
     display: block;
     color: white;
-    padding: 10px;
-    box-sizing: border-box;
     text-decoration: none;
-    font-size: 20px;
     transition: 0.75s;
+}
+
+.checkbox:checked ~ .sidebar {
+    left: 0;
 }
 
 .sidebar li a:hover {
     transform: translateX(10px);
     color: brown;
-}
-
-.checkbox:checked ~ .sidebar {
-    left: -300px;
 }
 
 .sidebar img {
@@ -128,27 +126,18 @@ nav {
 /* HERO PAGE */
 
 #hero {
-    position: sticky;
-    top: 0;
-}
-
-.home-image {
     height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    object-fit: cover;
-    position: relative;
-    z-index: -5;
+    background-image: url(hero.jpg);
+    background-position: center;
 }
 
 .home-filter {
     height: 100vh;
-    width: 100vw;
     background-color: rgba(0, 0, 0, 0.35);
-    position: absolute;
-    top: 0;
     display: flex;
-    z-index: -4;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
     overflow: hidden;
 }
 
@@ -158,118 +147,29 @@ nav {
     margin-right: auto;
     height: 100px;
     width: auto;
-    z-index: -3;
     overflow: hidden;
 }
 
-.home-people {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    object-fit: cover;
+.socials {
     position: absolute;
-    top: 0;
-    z-index: -2;
-}
-
-.home-people-filter {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    opacity: 0.35;
-}
-
-/* FEATURED SECTION */
-
-#featured {
+    bottom: 5vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: 50px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #2f2e2e;
-    position: relative;
-}
-
-.split {
-    width: 650px;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-/* DIVIDER */
-
-.divider {
-    height: 20vh;
-    width: 100vw;
-    position: relative;
-    overflow: hidden;
+.socials img {
+    height: 50px;
 }
 
-.divider img {
-    transform: translateY(-35%);
-}
-
-.div-filter {
-    height: 20vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.35);
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* ABOUT */
-
-#about {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #2F2E2E;
-    position: relative;
-}
-
-/* GALLERY */
-
-#gallery {
-    background-color: #2F2E2E;
-    position: relative;
-}
-
-/* SHOP */
-
-#shop {
-    background-color: #2F2E2E;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.shop-items {
-    display: flex;
-    width: 100vw;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-/* GIGS */
-
-#gig-list {
-    background-color: #2F2E2E;
-    position: relative;
-}
-
-/* CONTACT */
-
-#contact {
-    background-color: #2F2E2E;
-    position: relative;
+.socials img:hover {
+    filter: brightness(50%);
+    cursor: pointer;
 }
