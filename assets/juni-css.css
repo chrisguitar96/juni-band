@@ -245,7 +245,9 @@ p {
     width: 30vw;
     min-width: 250px;
     max-width: 350px;
-    height: auto;
+    height: 30vw;
+    min-height: 250px;
+    max-height: 350px;
     overflow: hidden;
     border-radius: 2.5%;
 }
@@ -301,6 +303,177 @@ p {
 .live-text {
     width: 550px;
 }
+
+/* GALLERY */
+
+.gallery {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-scroll-div {
+    width: 90%;
+    height: 66vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10vh;
+}
+
+.cover {
+    position: relative;
+    width: 90%;
+    height: 100%;
+}
+
+.cover::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 150px;
+    background-image: linear-gradient(-90deg, rgba(40,40,40,0), rgba(40,40,40,1));
+}
+
+.cover::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 150px;
+    background-image: linear-gradient(90deg, rgba(40,40,40,0), rgba(40,40,40,1));
+}
+
+.scroll-images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left; 
+    align-items: center; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    scrollbar-width: thin; 
+    scrollbar-color: rgb(35,35,35) rgb(60,60,60);
+    scroll-snap-type: mandatory;
+    user-select: none;
+}
+
+.scroll-images::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* For Microsoft Edge */
+.scroll-images::-ms-scrollbar {
+    width: 12px;
+}
+
+.scroll-images::-webkit-scrollbar-thumb {
+    background: rgb(35,35,35);
+    border-radius: 20px;
+}
+
+.scroll-images::-webkit-scrollbar-track {
+    background-color: rgb(60,60,60);
+    border-radius: 20px;
+}
+
+
+
+.scroll-images::-ms-scrollbar-thumb {
+    background: red;
+    border-radius: 20px;
+}
+
+.scroll-images::-ms-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 20px;
+}
+
+.img-container {
+    min-width: 600px;
+    height: 450px;
+    margin: 1px 10px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5%;
+    scroll-snap-align: center;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+/* SHOP */
+
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.shop-left {
+    width: 550px;
+    height: 66vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.shop-right {
+    width: 550px;
+    height: 66vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.album-container {
+    position: relative;
+    text-align: center;
+}
+
+.album-container img {
+    height: 30vw;
+    width: 30vw;
+    transition: var(--animation-timing);
+}
+
+.album-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(35,35,35, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--animation-timing);
+    cursor: pointer;
+}
+
+.album-filter:hover {
+    opacity: 1;
+}
+
+/* CONTACT */
+
+
 
 /* FOOTER */
 
