@@ -14,9 +14,9 @@
 <body>
     <header>
         <label class="hamb">
-            <input type="checkbox">
-        </label>
-        <ul class="sidebar">
+            <input type="checkbox" id="menuCheckbox">
+        </label>        
+        <ul class="sidebar" id="sidebar">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#live">Live</a></li>
@@ -64,15 +64,86 @@
         </div>
     </section>
 
+    <section id="faces">
+        <h2>The Band</h2>
+        <div class="faces">
+            <div class="face-container">
+                <img src="assets/faces/1.jpg" alt="Anna headshot">
+                <p><strong>Anna</strong><br>Violin</p>
+            </div>
+            <div class="face-container">
+                <img src="assets/faces/2.jpg" alt="Harry headshot">
+                <p><strong>Harry</strong><br>Guitar/Vocals</p>
+            </div>
+            <div class="face-container">
+                <img src="assets/faces/3.jpg" alt="Dom headshot">
+                <p><strong>Dom</strong><br>Whistles</p>
+            </div>
+            <div class="face-container">
+                <img src="assets/faces/4.jpg" alt="Rob headshot">
+                <p><strong>Rob</strong><br>Bass/Guitar</p>
+            </div>
+            <div class="face-container">
+                <img src="assets/faces/5.jpg" alt="Emily headshot">
+                <p><strong>Emily</strong><br>Flute</p>
+            </div>
+            <div class="face-container">
+                <img src="assets/faces/6.jpg" alt="Aidan headshot">
+                <p><strong>Aidan</strong><br>Percussion</p>
+            </div>
+        </div>
+    </section>
+    
     <section id="live" class="live">
         <div class="live-image">
-            <div class="live-img-container">
-                <img src="assets/live.jpg" alt="Juniper on stage">
-            </div>    
+            <img src="assets/live.jpg" alt="Juniper on stage"> 
         </div>
+        <h2>Live</h2>
         <div class="live-text">
-            <h2>Live</h2>
-            <p>Juniper are so good live. Oh my gosh seriously. Please book tickets here!</p>
+            <table>
+                    <tr class="odd">
+                        <td class="dateandinfo"><span class="date">3</span><br>Apr</td>
+                        <td>Shirley Folk Club</td>
+                        <td>Solihull</td>
+                        <td class="dateandinfo">Info</td>
+                    </tr>
+                    <tr>
+                        <td class="dateandinfo"><span class="date">5</span><br>Apr</td>
+                        <td>Sunflower Lounge</td>
+                        <td>Birmingham</td>
+                        <td class="dateandinfo">Info</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="dateandinfo"><span class="date">12</span><br>Apr</td>
+                        <td>HEART (with Helian)</td>
+                        <td>Leeds</td>
+                        <td class="dateandinfo">Info</td>
+                    </tr>
+                    <tr>
+                        <td class="dateandinfo"><span class="date">13</span><br>Apr</td>
+                        <td>Marple Scout Hut</td>
+                        <td>Stockport</td>
+                        <td class="dateandinfo">Info</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="dateandinfo"><span class="date">22</span><br>Apr</td>
+                        <td>The Flowerpot</td>
+                        <td>Derby</td>
+                        <td class="dateandinfo">Info</td>
+                    </tr>
+                    <tr>
+                        <td class="dateandinfo"><span class="date">25-26</span><br>May</td>
+                        <td>Chester Folk Festival</td>
+                        <td>Chester</td>
+                        <td class="dateandinfo">Info</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="dateandinfo"><span class="date">31</span><br>May</td>
+                        <td>The Wren</td>
+                        <td>Stone</td>
+                        <td class="dateandinfo">Info</td>
+                    </tr>
+            </table>
         </div>
     </section>
 
