@@ -33,7 +33,8 @@ body {
     margin: 3rem auto;
 }
 
-img {
+.faces img,
+.contact img {
     max-width: 100%;
     height: auto;
 }
@@ -458,34 +459,98 @@ td a:hover {
 
 /* GALLERY */
 
-.image-slider {
-    margin-top: 5vh;
-    display: grid;
-    grid-template-columns: repeat(8, minmax());
-    gap: 20px;
-    overflow-x: scroll;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 45vh;
-    scrollbar-width: none;
+.slider-wrapper {
+    position: relative;
 }
 
-.image-slider::-webkit-scrollbar {
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    color: hsl(46, 58%, 90%);
+    background-color: rgb(100,100,100);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -20px;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -20px;
+}
+
+.slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 18px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
     display: none;
 }
 
-.img-cont {
-    width: 45vw;
-    max-width: 150px;
-    height: 45vh;
+.slider-wrapper .image-list .image-item {
+    width: 400px;
+    height: 325px;
+    object-fit: cover;
     border-radius: 5%;
-    overflow: hidden;
 }
 
-.img-cont img {
-    object-fit: cover;
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    background: var(--background);
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    height: 2px;
+    width: 100%;
+    background: #f1f1f1;
+    position: relative;
+    border-radius: 5%;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+     
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
     height: 100%;
-    width: auto;
+    width: 50%;
+    background: rgb(20,20,20) ;
+    border-radius: inherit;
+    cursor: grab;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px; 
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
 }
 
 /* CONTACT */
