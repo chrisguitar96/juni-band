@@ -2,11 +2,18 @@ html {
     scroll-behavior: smooth;
 }
 
+@media only screen and (max-width: 550px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
 *, *::before, *::after {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 :root {
@@ -78,17 +85,18 @@ h1, h2, h3, h4, p, form, input:focus, textarea:focus, table {
 h1 {
     font-family: "Quattrocento", serif;
     text-align: center;
-    font-size: 2.4em;
-    letter-spacing: 0.2em;
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
     font-weight: normal;
 }
 
 h2 {
     font-family: "Quattrocento", serif;
     text-align: center;
-    font-size: 2.2em;
-    letter-spacing: 0.2em;
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
     font-weight: normal;
+    margin: 2rem auto;
 }
 
 h3 {
@@ -97,7 +105,7 @@ h3 {
 
 p, form, table {
     font-family: "Quattrocento Sans", sans-serif;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 1.3;
 }
 
@@ -162,15 +170,18 @@ p, form, table {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -30vw;
     margin: 0;
     padding: 75px 20px;
-    width: 250px;
+    width: 30vw;
+    min-width: 140px;
+    max-width: 250px;
     height: 100vh;
     background-color: var(--background);
     transition: all var(--animation-timing);
     z-index: 10;
     overflow-y: auto;
+    opacity: 0;
 }
 
 .sidebar li {
@@ -189,6 +200,7 @@ p, form, table {
 
 .hamb:has(input:checked) ~ .sidebar {
     left: 0;
+    opacity: 1;
 }
 
 .sidebar li a:hover {
@@ -203,14 +215,19 @@ p, form, table {
     bottom: 20px;
 }
 
-@media (max-height: 550px) {
+@media (max-height: 900px) {
     .sidebar img {
-        height: 50vh;
+        height: 40vh;
         padding-top: 20px;
         position: absolute;
         bottom: 20px;
-        left: 190px;
     }    
+}
+
+@media (max-height: 500px) {
+    .sidebar img {
+        display: none;
+    }
 }
 
 /* HERO PAGE */
@@ -221,6 +238,16 @@ p, form, table {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: 1s;
+}
+
+@media only screen and (orientation: portrait) {
+    #hero {
+        background-image: url(hero-port.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 .home-filter {
@@ -234,13 +261,19 @@ p, form, table {
 }
 
 .home-logo {
-    margin-top: 10vh;
+    margin-top: clamp(70px, 12vh, 125px);
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 85vw;
+    max-width: 800px;
     overflow: hidden;
+    background-image: url(logo-plain.png);
+    background-size: cover;
+    background-position: center;
 }
+
+
 
 /* DIV */
 
@@ -264,50 +297,81 @@ p, form, table {
 h1 {
     text-align: center;
     width: 100vw;
-    margin: 3auto;
 }
 
 .about-text {
-    height: 50vh;
     width: 560px;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 3
+    justify-content: center;
 }
 
 .about-text p {
     width: 80%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     text-align: center;
 }
 
+.about-text .pre-order {
+    display: block;
+    margin: 7vh auto;
+    text-align: center;
+    
+}
+
+.feat-media {
+    display: inline-flex;
+    width: 560px;
+    justify-content: center;
+}
+
 .feat-container {
+    display: inline-flex;
+    width: 560px;
     border-radius: 5%;
     margin-bottom: 2rem;
 }
 
-.feat-media {
+.feat-media iframe {
     width: 560px;
+    height: 315px;
+    border-radius: 5px;
+    margin: 5vh auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .feat-media iframe {
+        width: 320px;
+        height: 185px;
+    }
 }
 
 /* LIVE */
 
 .live h2 {
-    margin: 3rem auto;
+    margin: 0 auto;
     text-align: center;
 }
 
 .live-text {
-    width: 90%;
+    width: 100%;
     margin: 15px auto;
 }
 
 table {
-    margin: 10px auto 0px auto;
-    width: 80%;
+    margin: 10vh auto 10vh auto;
+    width: 90%;
     text-align: left;
     border: none;
+}
+
+@media only screen and (max-width: 400px) {
+    table {
+        font-size: 1.1rem;
+        width: 100%;
+    }
 }
 
 table, tr, td {
@@ -372,6 +436,19 @@ td a:hover {
     position: relative;
 }
 
+@media only screen and (max-width: 830px) {
+    .face-container {
+        margin: 4vw ;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .face-container {
+        height: 200px;
+        width: 200px;
+    }
+}
+
 .face-container p {
     position: absolute;
     top: 0;
@@ -380,7 +457,7 @@ td a:hover {
     height: 105%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.60);
-    padding-top: 100px;
+    padding-top: 38%;
     opacity: 0;
     transition: all var(--animation-timing);
 }
@@ -405,18 +482,21 @@ td a:hover {
 
 .shop-left {
     width: 550px;
-    height: 66vh;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
 }
 
+.shop-left .pre-order {
+    display: block;
+    margin: 3rem auto;
+}
+
 .shop-right {
     width: 550px;
-    height: 66vh;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
@@ -458,19 +538,22 @@ td a:hover {
 /* GALLERY */
 
 .gallery {
+    margin-top: 5rem;
     margin-bottom: 15vh;
 }
 
 .slider-wrapper {
     position: relative;
     user-select: none;
-    margin-top: 5vh;
+    margin-top: 1rem;
 }
 
 .slider-wrapper .slide-button {
     position: absolute;
     height: 3vw;
+    min-height: 40px;
     width: 3vw;
+    min-width: 40px;
     color: hsl(46, 58%, 90%);
     background-color: rgba(20,20,20,0.5);
     border-radius: 50%;
@@ -484,6 +567,11 @@ td a:hover {
     overflow: visible;
 }
 
+.slide-button p {
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
 .slider-wrapper .slide-button:hover {
     background-color: rgba(20,20,20,0.75);;
 }
@@ -491,13 +579,13 @@ td a:hover {
 .slider-wrapper .slide-button#prev-slide {
     left: 0px;
     display: none;
-    top: 45%;
+    top: 46.5%;
 }
 
 .slider-wrapper .slide-button#next-slide {
     right: 0px;
     transform: scale(-1, 1);
-    bottom: 45%;
+    bottom: 46.5%;
 }
 
 .slider-wrapper .image-list {
@@ -519,6 +607,13 @@ td a:hover {
     height: 325px;
     object-fit: cover;
     border-radius: 5%;
+}
+
+@media only screen and (max-width: 450px) {
+    .slider-wrapper .image-list .image-item {
+        width: 300px;
+        height: 225px;
+    }
 }
 
 .container .slider-scrollbar {
@@ -577,18 +672,11 @@ td a:hover {
 }
 
 .contact-photo {
-    width: 550px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-photo-container {
-    width: auto;
     height: 30vw;
     min-height: 250px;
     max-height: 350px;
+    width: auto;
+    max-width: 550px;
     overflow: hidden;
     border-radius: 2.5%;
 }
@@ -601,18 +689,17 @@ td a:hover {
 
 .contact-form {
     width: 550px;
-    height: 30vw;
-    min-height: 250px;
-    max-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 .contact-form p {
     overflow: visible;
     border-radius: 0.25rem;
+    margin-bottom: 2rem;
 }
 
 .contact-form a {
@@ -642,7 +729,7 @@ td a:hover {
 
 .contact-form form {
     width: 80%;
-    min-width: 400px;
+    min-width: 350px;
     height: 70%;
     min-height: 250px;
     padding: 10px;
@@ -727,23 +814,33 @@ textarea {
 /* MAILING LIST */
 
 .mailing-list {
-    height: 50vh;
     margin-bottom: 15vh;
     margin-top: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+}
+
+.mailing-list p {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.ml-embedded p {
+    text-align: left;
 }
 
 /* EPK & TECH SPEC */
+.epk-design {
+    margin-top: 10vh;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
 
 .epk {
-    margin-bottom: 0.5rem;
-    margin-left: 1rem;
-    position: relative;
-    z-index: 100;
-    width: 25vw;
+    font-size: 0.75rem;
+    width: 25%;
+    margin-left: 5px ;
 }
 
 .epk a {
@@ -760,6 +857,13 @@ textarea {
 
 .epk a:active {
     color: rgba(130,130,130,0.5);
+}
+
+.design {
+    font-size: 0.75rem;
+    text-align: right;
+    width: 25%;
+    margin-right: 5px;
 }
 
 /* FOOTER */
@@ -787,9 +891,9 @@ footer {
 }
 
 .socials img {
-    height: 3vw;
-    min-height: 35px;
-    max-height: 45px;
+    width: 3vw;
+    min-width: 35px;
+    max-width: 45px;
 }
 
 .socials img:hover {
