@@ -48,7 +48,7 @@
     <div class="blur"></div>
 
     <section id="about" class="about section">
-        <h1>New Album Out 05.04.24</h1>
+        <h1>Debut Album Out 05.04.24</h1>
         <div class="about-text">
             <p>Genre-bending, energising, boundary-crossing.<br><br>
             Juniper are a group of close friends who combine their collective musical influences on the stage to create a show full of bold, intriguing traditional and 
@@ -59,7 +59,7 @@
             src="https://js.stripe.com/v3/buy-button.js">
             </script>
 
-            <stripe-buy-button
+            <stripe-buy-button class="pre-order" 
             buy-button-id="buy_btn_1Of2CFHaUZu9WQJ85YMVDyzv"
             publishable-key="pk_live_51ObPWuHaUZu9WQJ82Wykjh2xPBJlypqeC1r3NdwqZFEzm26RqnOcs2v7zMVW6FaRUiDnWxjgS7te8nbVDJ1qoDzT00NjLlCpvo"
             >
@@ -68,7 +68,7 @@
             
         <div class="feat-media">
             <div class="feat-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmlrTkJS5x8?si=000FdExD3pZWkw0f" 
+                <iframe src="https://www.youtube.com/embed/jmlrTkJS5x8?si=000FdExD3pZWkw0f" 
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen></iframe>
             </div>
@@ -123,7 +123,7 @@
             </table>
         </div>
     </section>
-
+<!-- FACES -->
     <section id="faces" class="faces section">
         <h2>The Band</h2>
         <div class="faces">
@@ -160,7 +160,7 @@
             <p>Pre-order our debut album 'NAME' now, for only £10.<br>
                 <br>
             Receive it by 1st class post on Fri 5th Apr.</p>
-            <stripe-buy-button
+            <stripe-buy-button class="pre-order"
             buy-button-id="buy_btn_1Of2CFHaUZu9WQJ85YMVDyzv"
             publishable-key="pk_live_51ObPWuHaUZu9WQJ82Wykjh2xPBJlypqeC1r3NdwqZFEzm26RqnOcs2v7zMVW6FaRUiDnWxjgS7te8nbVDJ1qoDzT00NjLlCpvo"
             >
@@ -179,7 +179,7 @@
       <h2>Gallery</h2>
       <div class="container">
         <div class="slider-wrapper">
-            <button id="prev-slide" class="slide-button material-symbols-rounded">«</button>
+            <button id="prev-slide" class="slide-button material-symbols-rounded"><p>«</p></button>
             <div class="image-list">
                 <img src="assets/gallery/1.jpg" alt="" class="image-item">
                 <img src="assets/gallery/2.jpg" alt="" class="image-item">
@@ -190,7 +190,7 @@
                 <img src="assets/gallery/7.jpg" alt="" class="image-item">
                 <img src="assets/gallery/8.jpg" alt="" class="image-item">
             </div>
-            <button id="next-slide" class="slide-button material-symbols-rounded">«</button>    
+            <button id="next-slide" class="slide-button material-symbols-rounded"><p>«</p></button>    
         </div>
         <div class="slider-scrollbar">
             <div class="scrollbar-track">
@@ -202,9 +202,7 @@
 <!-- CONTACT-->
     <section class="contact section" id="contact">
         <div class="contact-photo">
-            <div class="contact-photo-container">
-                <img src="assets/contact-img.jpg" alt="Juniper standing in autumnal leaves">
-            </div>
+            <img src="assets/contact-img.jpg" alt="Juniper standing in autumnal leaves">
         </div>
         <div class="contact-form">
             <h2>Get in Touch</h2>
@@ -223,13 +221,15 @@
         </div>
     </section>
 <!-- MAILING LIST -->
-    <section id="mailing-list" class="mailing-list">
+    <section id="mailing-list" class="mailing-list section">
         <h2>Mailing List</h2>
         <p>Sign up to our mailing list for all the latest releases, gig dates, and news.</p>
         <div class="ml-embedded" data-form="PLghHz"></div>
-        </section>
-    <section class="epk">
-        <p><a target="_blank" href="https://drive.google.com/drive/folders/1mbm144qhAwqn2sSR1awUhmA67Yz17hEX?usp=sharing">Download EPK & Tech Spec.</a></p>
+    </section>
+<!-- EPK AND CREDITS -->    
+    <section class="epk-design">
+        <p class="epk"><a target="_blank" href="https://drive.google.com/drive/folders/1mbm144qhAwqn2sSR1awUhmA67Yz17hEX?usp=sharing">Download EPK & Tech Spec.</a></p>
+        <p class="design">Web Design © 2024 Chris Roberts</p>
     </section>
     <footer>
         <div class="socials">
