@@ -176,7 +176,7 @@ p, form, table {
     width: 30vw;
     min-width: 140px;
     max-width: 250px;
-    height: 100vh;
+    height: 100svh;
     background-color: var(--background);
     transition: all var(--animation-timing);
     z-index: 10;
@@ -233,7 +233,7 @@ p, form, table {
 /* HERO PAGE */
 
 #hero {
-    height: 100vh;
+    height: 100svh;
     background-image: url(hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -350,18 +350,13 @@ h1 {
 
 /* LIVE */
 
-.live h2 {
-    margin: 0 auto;
-    text-align: center;
-}
-
 .live-text {
     width: 100%;
     margin: 15px auto;
 }
 
 table {
-    margin: 10vh auto 10vh auto;
+    margin: 0 auto;
     width: 90%;
     text-align: left;
     border: none;
@@ -423,22 +418,18 @@ td a:hover {
     max-width: 1200px;
 }
 
-.faces h2 {
-    margin: 2rem auto;
-}
-
 .face-container {
     height: 250px;
     width: 250px;
     border-radius: 175px;
     overflow: hidden;
-    margin: 60px;
+    margin: 0 60px 60px 60px;
     position: relative;
 }
 
 @media only screen and (max-width: 830px) {
     .face-container {
-        margin: 4vw ;
+        margin: 0 4vw 4vw 4vw;
     }
 }
 
