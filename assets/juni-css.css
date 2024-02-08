@@ -78,7 +78,7 @@ body {
 
 /* FONTS */
 
-h1, h2, h3, h4, p, form, input:focus, textarea:focus, table {
+h1, h2, h3, h4, p, form, .contact input:focus, textarea:focus, table {
     color: #f4edd7;
 }
 
@@ -246,12 +246,12 @@ p, form, table {
         background-image: url(hero-port.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: bottom;
     }
 }
 
 .home-filter {
-    height: 100vh;
+    height: 100svh;
     background-color: rgba(20, 20, 20, 0.45);
     display: flex;
     flex-direction: column;
