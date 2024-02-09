@@ -78,7 +78,7 @@ body {
 
 /* FONTS */
 
-h1, h2, h3, h4, p, form, input:focus, textarea:focus, table {
+h1, h2, h3, h4, p, form, .contact input:focus, textarea:focus, table {
     color: #f4edd7;
 }
 
