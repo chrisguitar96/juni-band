@@ -1,3 +1,11 @@
+body {
+    background-color: hsl(46, 57%, 100%);
+}
+
+h2, h3, p {
+    color: rgb(40,40,40);
+}
+
 .ceilidh-header {
     width: 100vw;
     height: 50vh;
@@ -11,7 +19,7 @@
 .ceilidh-head-content {
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.55);
+    background-color: rgba(0,0,0,0.35);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,6 +29,7 @@
 
 .ceilidh-head-content h1 {
     font-size: 4rem;
+    color: hsl(46, 57%, 100%);
 }
 
  .ceilidh-sub {
@@ -70,4 +79,101 @@
     width: 100%;
     height: auto;
     border-radius: 5%;
+}
+
+.gallery {
+    background-color: hsl(46, 57%, 100%);
+}
+
+.slider-wrapper .slide-button {
+    color: rgb(30,30,30);
+    background-color: hsla(46, 58%, 90%, 0.75);
+}
+
+.slider-wrapper .slide-button:hover {
+    background-color: hsla(46, 58%, 90%, 0.95);
+}
+
+.container .slider-scrollbar {
+    background: hsl(46, 57%, 100%);
+} 
+  
+
+.slider-scrollbar .scrollbar-track {
+    background: hsl(46, 57%, 80%);
+}
+
+.container .slider-scrollbar .scrollbar-thumb {
+    background: rgb(40,40,40);
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px; 
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.contact {
+    background-color: hsl(46, 57%, 100%);
+}
+
+.contact-form a {
+    color: rgb(40,40,40);
+    background-color: hsl(46, 58%, 85%);
+}
+
+.contact-form a:hover {
+    background-color: hsl(46, 58%, 75%);
+    border: 1px solid #252525;
+}
+
+/* CONTACT FORM */
+
+.contact-form form {
+    background-color: hsl(46, 58%, 85%);
+    color: rgb(40,40,40);
+}
+
+.contact input, textarea {
+    background-color: hsl(46, 58%, 75%);
+    color: rgb(40,40,40);
+}
+
+.contact input:focus, textarea:focus {
+    background-color: hsl(46, 58%, 65%);
+    border: #252525;
+}
+
+.contact input[type="submit"]:hover {
+    background-color: hsl(46, 58%, 65%);
+    color: rgb(40,40,40);
+    border: solid rgb(40,40,40) 1px;
+} 
+
+.contact input[type="submit"]:active {
+    background-color: hsl(46, 58%, 55%);
+    color: rgb(30,30,30);
+    border: solid rgb(30,30,30) 0.25px;
+}
+
+footer {
+    background-color: hsl(46, 57%, 100%);
+}
+
+.socials img {
+    filter: brightness(-100%);
+}
+
+.socials img:hover {
+    filter: brightness(50%);
+    cursor: pointer;
 }

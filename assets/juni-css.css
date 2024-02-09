@@ -770,7 +770,7 @@ textarea {
 .contact input, textarea {
     background-color: #646464;
     font-family: "Quattrocento Sans", sans-serif;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .contact input:focus, textarea:focus {
@@ -812,6 +812,10 @@ textarea {
 .mailing-list p {
     margin: 2rem auto;
     text-align: center;
+}
+
+.ml-embedded * {
+    overflow: visible;
 }
 
 .ml-embedded p {

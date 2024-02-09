@@ -82,19 +82,22 @@
               <img src="assets/contact-img.jpg" alt="Juniper standing in autumnal leaves">
           </div>
           <div class="contact-form">
-              <h2>Get in Touch</h2>
-              <p><a href="mailto:hello@juniperfolk.co.uk">Email Us</a></p>
-              <form action="process_form.php" method="post">
-                  <label class="name" for="name">Name:</label>
-                  <input type="text" id="name" name="name">
-                  
-                  <label class="email" for="email">Email:</label>
-                  <input type="email" id="email" name="email">
-                  
-                  <label class="message" for="message">Message:</label>
-                  <textarea rows="4" cols="38" name="message"></textarea>
-                  <input class="submit" type="submit" value="Send">
-              </form>
+            <h2>Get in Touch</h2>
+            <p><a href="mailto:info@juniperfolk.co.uk">Email Us</a></p>
+            <form action="https://api.web3forms.com/submit" method="post">
+
+                <input type="hidden" name="access_key" value="59ef8ae1-aaa8-40d4-a28e-6f2ede66ebcf">
+
+                <label class="name" for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                
+                <label class="email" for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                
+                <label class="message" for="message">Message:</label>
+                <textarea rows="4" cols="38" name="message"></textarea>
+                <input class="submit" type="submit" value="Send">
+            </form>
           </div>
       </section>
 

@@ -28,7 +28,7 @@
     <header>
         <label class="hamb">
             <input type="checkbox" id="menuCheckbox">
-        </label>        
+        </label>   
         <ul class="sidebar" id="sidebar">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -208,8 +208,11 @@
         </div>
         <div class="contact-form">
             <h2>Get in Touch</h2>
-            <p><a href="mailto:hello@juniperfolk.co.uk">Email Us</a></p>
-            <form action="process_form.php" method="post">
+            <p><a href="mailto:info@juniperfolk.co.uk">Email Us</a></p>
+            <form action="https://api.web3forms.com/submit" method="post">
+
+                <input type="hidden" name="access_key" value="59ef8ae1-aaa8-40d4-a28e-6f2ede66ebcf">
+
                 <label class="name" for="name">Name:</label>
                 <input type="text" id="name" name="name">
                 
